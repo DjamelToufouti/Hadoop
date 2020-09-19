@@ -13,22 +13,5 @@ Using hadoop-streaming jar implement python codes mapper.py and reducer.py in or
 Found 2 items  
 -rw-r--r--   2 t.djamel-dsti hdfs          0 2020-09-17 11:56 data/word_count/_SUCCESS  
 -rw-r--r--   2 t.djamel-dsti hdfs      61765 2020-09-17 11:56 data/word_count/part-r-00000  
-[t.djamel-dsti@edge-1 ~]$ hdfs dfs -head data/word_count/part-r-00000  
-"Defects,"      1  
-"Information    1  
-"Plain  2  
-"Project        5  
-"Right  1  
-#11]    1  
-$5,000) 1  
-'AS-IS',        1  
-("the   1  
-($1     1  
-(801)   1  
-(Alice  4  
-(And,   1  
-(As     1  
-(Before 1  
-(Dinah  1  
 
 
