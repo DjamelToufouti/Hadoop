@@ -15,7 +15,7 @@ Goal is to implement mapper.py and reducer.py using hadoop-streaming jar:
 [t.djamel-dsti@edge-1 ~]$ hdfs dfs -ls data/wordcount  
 Found 2 items  
 -rw-r--r--   2 t.djamel-dsti hdfs          0 2020-09-17 11:56 data/wordcount/_SUCCESS  
--rw-r--r--   2 t.djamel-dsti hdfs      61765 2020-09-17 11:56 data/wordcount/part-r-00000  
-[t.djamel-dsti@edge-1 ~]$ hdfs dfs -head output/wordcount/part-r-00000  
+-rw-r--r--   2 t.djamel-dsti hdfs      61765 2020-09-17 11:56 data/wordcount/part-00000  
+[t.djamel-dsti@edge-1 ~]$ hdfs dfs -head output/wordcount/part-00000  
 
 
