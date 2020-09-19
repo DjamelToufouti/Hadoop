@@ -5,9 +5,8 @@ Goal is to implement mapper.py and reducer.py using hadoop-streaming jar:
   * finlaly to get the most used word in the text book (using output of previous wordcount map reduce as input)
   
 ### Map Reduce with Python
-[t.djamel-dsti@edge-1 ~]$ touch mapper.py  
+[t.djamel-dsti@edge-1 ~]$ touch mapper.py reducer.py  
 [t.djamel-dsti@edge-1 ~]$ nano mapper.py  
-[t.djamel-dsti@edge-1 ~]$ touch reducer.py  
 [t.djamel-dsti@edge-1 ~]$ nano reducer.py  
 [t.djamel-dsti@edge-1 ~]$ wget http://www.gutenberg.org/files/11/11-0.txt  
 [t.djamel-dsti@edge-1 ~]$ mv 11-0.txt alice.txt   
