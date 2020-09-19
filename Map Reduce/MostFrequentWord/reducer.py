@@ -6,7 +6,7 @@ for line in sys.stdin:
     line = line.strip()
 
     print "word--DELIMITER--%s" % line
-[xavier@edge-1 ~]$ cat mr/mostfrequent_real/reducer.py 
+[t.djamel-dsti@edge-1 ~]$ cat mostfrequent/reducer.py 
 from operator import itemgetter
 import sys
 
