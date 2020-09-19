@@ -1,5 +1,5 @@
 # Map Reduce implementation
-Goal is:
+Goal is to implement mapper.py and reducer.py using hadoop-streaming jar:
   * to find the frequency of each words inside text file alice.txt (with the content of the book: "Alice in the wonderland" found here: http://www.gutenberg.org/files/11/11-0.txt)
   * to get the most used (frequent) word in the text file
   * finlaly to get the most used word in the text book (using output of previous wordcount map reduce as input)
