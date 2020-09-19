@@ -1,3 +1,5 @@
+# Map Reduce with Python
+
 ### Download the file and create mapper and reducer python scripts
 touch mapper.py reducer.py  
 nano mapper.py  
