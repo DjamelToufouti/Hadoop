@@ -1,7 +1,7 @@
 # Map Reduce with Python
 
 ### Download the file and create mapper and reducer python scripts
-touch mapper.py reducer.py  
+'''touch mapper.py reducer.py  
 nano mapper.py  
 nano reducer.py  
 wget http://www.gutenberg.org/files/11/11-0.txt  
@@ -10,6 +10,7 @@ ls
 alice.txt  example.txt  mostfrequent  wordcount  
 ls wordcount
 mapper.py  reducer.py  
+'''
 
 ### Implement mapper.py and reducer.py using hadoop-streaming jar for word counts
  hdfs dfs -put alice.txt data/  
