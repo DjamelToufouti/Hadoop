@@ -23,6 +23,10 @@ Found 2 items
 [t.djamel-dsti@edge-1 ~]$ hdfs dfs -head output/wordcount/part-00000  
 [t.djamel-dsti@edge-1 ~]$ cat example.txt | python wordcount/mapper.py | sort | python wordcount/reducer.py | python mostfrequent/mapper.py | python mostfrequent/reducer.py  
 word--DELIMITER--and    2  
+yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -file mostfrequent/mapper.py -mapper "python mapper.py" -file mostfrequent/reducer.py -reducer "python reducer.py" -input output/wordcount/part-00000 -output output/mostfrequent  
+[t.djamel-dsti@edge-1 ~]$ hdfs dfs -ls output/mostfrequent  
+[t.djamel-dsti@edge-1 ~]$ hdfs dfs -head output/mostfrequent/part-00000  
+word--DELIMITER--the    1677  
 
 
 
