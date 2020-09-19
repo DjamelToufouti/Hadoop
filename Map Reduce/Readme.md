@@ -10,7 +10,7 @@ Goal is to implement mapper.py and reducer.py using hadoop-streaming jar:
 [t.djamel-dsti@edge-1 ~]$ nano reducer.py  
 [t.djamel-dsti@edge-1 ~]$ wget http://www.gutenberg.org/files/11/11-0.txt  
 [t.djamel-dsti@edge-1 ~]$ mv 11-0.txt alice.txt   
-[t.djamel-dsti@edge-1 ~]$ ls
+[t.djamel-dsti@edge-1 ~]$ ls  
 alice.txt  example.txt  mostfrequent  wordcount  
 [t.djamel-dsti@edge-1 ~]$ ls wordcount
 mapper.py  reducer.py  
@@ -21,5 +21,8 @@ Found 2 items
 -rw-r--r--   2 t.djamel-dsti hdfs          0 2020-09-17 11:56 data/wordcount/_SUCCESS  
 -rw-r--r--   2 t.djamel-dsti hdfs      61765 2020-09-17 11:56 data/wordcount/part-00000  
 [t.djamel-dsti@edge-1 ~]$ hdfs dfs -head output/wordcount/part-00000  
+[t.djamel-dsti@edge-1 ~]$ cat example.txt | python wordcount/mapper.py | sort | python wordcount/reducer.py | python mostfrequent/mapper.py | python mostfrequent/reducer.py  
+word--DELIMITER--and    2  
+
 
 
