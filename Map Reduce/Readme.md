@@ -12,10 +12,10 @@ Goal is to implement mapper.py and reducer.py using hadoop-streaming jar:
 [t.djamel-dsti@edge-1 ~]$ mv 11-0.txt alice.txt   
 [t.djamel-dsti@edge-1 ~]$  hdfs dfs -put alice.txt data/  
 [t.djamel-dsti@edge-1 ~]$  yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -file mapper.py -mapper "python mapper.py" -file reducer.py -reducer "python reducer.py" -input data/alice.txt -output output/wordcount  
-[t.djamel-dsti@edge-1 ~]$ hdfs dfs -ls data/word_count  
+[t.djamel-dsti@edge-1 ~]$ hdfs dfs -ls data/wordcount  
 Found 2 items  
--rw-r--r--   2 t.djamel-dsti hdfs          0 2020-09-17 11:56 data/word_count/_SUCCESS  
--rw-r--r--   2 t.djamel-dsti hdfs      61765 2020-09-17 11:56 data/word_count/part-r-00000  
-[t.djamel-dsti@edge-1 ~]$ hdfs dfs -head data/word_count/part-r-00000  
+-rw-r--r--   2 t.djamel-dsti hdfs          0 2020-09-17 11:56 data/wordcount/_SUCCESS  
+-rw-r--r--   2 t.djamel-dsti hdfs      61765 2020-09-17 11:56 data/wordcount/part-r-00000  
+[t.djamel-dsti@edge-1 ~]$ hdfs dfs -head output/wordcount/part-r-00000  
 
 
