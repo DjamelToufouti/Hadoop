@@ -5,8 +5,8 @@ Using hadoop-streaming jar implement python codes mapper.py and reducer.py in or
   * finlaly to get the most used word in the text book (using output of previous wordcount map reduce as input)
   
 ### Map Reduce with Python
-[t.djamel-dsti@edge-1 ~]$ wget http://www.gutenberg.org/files/11/11-0.txt
-[t.djamel-dsti@edge-1 ~]$ mv 11-0.txt alice.txt
+$[t.djamel-dsti@edge-1 ~]$ wget http://www.gutenberg.org/files/11/11-0.txt
+$[t.djamel-dsti@edge-1 ~]$ mv 11-0.txt alice.txt
 [t.djamel-dsti@edge-1 ~]$ ls
 alice.txt  demo_2020
 [t.djamel-dsti@edge-1 ~]$  hdfs dfs -put alice.txt data/
