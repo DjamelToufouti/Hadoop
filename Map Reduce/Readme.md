@@ -1,8 +1,36 @@
-## Map Reduce implementation 
+# Map Reduce implementation 
 Using hadoop-streaming jar implement python codes mapper.py and reducer.py in order:
   * to find the frequency of each words inside text file alice.txt (with the content of the book: "Alice in the wonderland" found here: http://www.gutenberg.org/files/11/11-0.txt)
   * to get the most used (frequent) word in the text file
   * finlaly to get the most used word in the text book (using output of previous wordcount map reduce as input)
   
-# Map Reduce with Python
-yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -file wordcount/mapper.py -mapper "python mapper.py" -file wordcount/reducer.py -reducer "python reducer.py" -input data/alice.txt -output output/wordcount
+### Map Reduce with Python
+[t.djamel-dsti@edge-1 ~]$ wget http://www.gutenberg.org/files/11/11-0.txt
+[t.djamel-dsti@edge-1 ~]$ mv 11-0.txt alice.txt
+[t.djamel-dsti@edge-1 ~]$ ls
+alice.txt  demo_2020
+[t.djamel-dsti@edge-1 ~]$  hdfs dfs -put alice.txt data/
+[t.djamel-dsti@edge-1 ~]$ yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples.jar wordcount data/alice.txt data/word_count
+[t.djamel-dsti@edge-1 ~]$ hdfs dfs -ls data/word_count
+Found 2 items
+-rw-r--r--   2 t.djamel-dsti hdfs          0 2020-09-17 11:56 data/word_count/_SUCCESS
+-rw-r--r--   2 t.djamel-dsti hdfs      61765 2020-09-17 11:56 data/word_count/part-r-00000
+[t.djamel-dsti@edge-1 ~]$ hdfs dfs -head data/word_count/part-r-00000
+"Defects,"      1
+"Information    1
+"Plain  2
+"Project        5
+"Right  1
+#11]    1
+$5,000) 1
+'AS-IS',        1
+("the   1
+($1     1
+(801)   1
+(Alice  4
+(And,   1
+(As     1
+(Before 1
+(Dinah  1
+
+
