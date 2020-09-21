@@ -5,7 +5,7 @@
 [t.djamel-dsti@edge-1 ~]$ mkdir drivers   
 ```
 
-### Get the  drivers.csv file located on HDFS and put it in drivers folder on edge  
+### Get the drivers.csv file (contains the data structure) located on HDFS and put it in drivers folder on edge  
 ```
 [t.djamel-dsti@edge-1 ~]$ hdfs dfs -get /data/drivers/drivers.csv drivers  
 [t.djamel-dsti@edge-1 ~]$ head drivers/drivers.csv  
