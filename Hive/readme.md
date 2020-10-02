@@ -1,4 +1,4 @@
-# Hive and beeline
+# Hive and beeline: Transform a .csv file to an .orc file
 
 ### Create a drivers folder in the HDFS home  
 ```
