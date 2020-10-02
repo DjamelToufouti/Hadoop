@@ -68,6 +68,6 @@ driverId,name,ssn,location,certified,wage-plan
 ### Run a HQL script (eg a SELECT) using !run in beeline   
 
 ```
-0: jdbc:hive2://zoo-1.au.adaltas.cloud:2181,z> !run drivers.hql
+0: jdbc:hive2://zoo-1.au.adaltas.cloud:2181,z> !run csv_to_orc.hql
 ```
 The file drivers.hql contains the SQL querie written above to check the csv table. It is located in the edge.
