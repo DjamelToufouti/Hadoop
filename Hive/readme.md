@@ -26,9 +26,14 @@ driverId,name,ssn,location,certified,wage-plan
 [t.djamel-dsti@edge-1 ~]$ beeline -u "jdbc:hive2://zoo-1.au.adaltas.cloud:2181,zoo-2.au.adaltas.cloud:2181,zoo-3.au.adaltas.cloud:2181/dsti;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;"    
 ```
 
+### Show existing databases
+```
+0: jdbc:hive2://zoo-1.au.adaltas.cloud:2181,z> show databases;
+```
+
 ### Set Hive database for schema (using a new putty window)   
 ```
-0: jdbc:hive2://zoo-1.au.adaltas.cloud:2181,z> use dsti_2020_fall_1    
+0: jdbc:hive2://zoo-1.au.adaltas.cloud:2181,z> use dsti_2020_fall_1;
 ```
 
 ### Create both external tables djamel_drivers_csv and djamel_drivers_orc    
