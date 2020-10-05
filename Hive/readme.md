@@ -75,4 +75,19 @@ driverId,name,ssn,location,certified,wage-plan
 ```
 0: jdbc:hive2://zoo-1.au.adaltas.cloud:2181,z> !run csv_to_orc.hql
 ```
++------------+-------------------------------------+--------------------+------------------+
+|  t.tconst  |           t.originaltitle           |   n.primaryname    | r.averagerating  |
++------------+-------------------------------------+--------------------+------------------+
+| tt0110912  | Pulp Fiction                        | Quentin Tarantino  | 8.9              |
+| tt6019206  | Kill Bill: The Whole Bloody Affair  | Quentin Tarantino  | 8.8              |
+| tt0534696  | Grave Danger: Part 2                | Quentin Tarantino  | 8.6              |
+| tt0534695  | Grave Danger: Part 1                | Quentin Tarantino  | 8.6              |
+| tt1853728  | Django Unchained                    | Quentin Tarantino  | 8.4              |
+| tt0105236  | Reservoir Dogs                      | Quentin Tarantino  | 8.3              |
+| tt0361748  | Inglourious Basterds                | Quentin Tarantino  | 8.3              |
+| tt0266697  | Kill Bill: Vol. 1                   | Quentin Tarantino  | 8.1              |
+| tt0401792  | Sin City                            | Quentin Tarantino  | 8.0              |
+| tt0378194  | Kill Bill: Vol. 2                   | Quentin Tarantino  | 8.0              |
++------------+-------------------------------------+--------------------+------------------+
+
 The file drivers.hql contains the SQL querie written above to check the csv table. It is located in the edge.
